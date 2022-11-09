@@ -1,12 +1,14 @@
 package com.hubinsord.pokedex.data.remote.responses
 
+import com.squareup.moshi.Json
+
 data class Animated(
-    val back_default: String,
-    val back_female: Any,
-    val back_shiny: String,
-    val back_shiny_female: Any,
-    val front_default: String,
-    val front_female: Any,
-    val front_shiny: String,
-    val front_shiny_female: Any
+    @Json(name = "back_default") val backDefault: String,
+    @Json(name = "back_female") val backFemale: Any,
+    @Json(name = "back_shiny") val backShiny: String,
+    @Json(name = "back_shiny_female") val backShinyFemale: Any,
+    @Json(name = "front_default") val frontDefault: String,
+    @Json(name = "front_female") val frontFemale: Any,
+    @Json(name = "front_shiny") val frontShiny: String,
+    @Json(name = "front_shiny_female") val frontShinyFemale: Any
 )

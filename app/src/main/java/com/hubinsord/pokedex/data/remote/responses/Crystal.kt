@@ -1,12 +1,14 @@
 package com.hubinsord.pokedex.data.remote.responses
 
+import com.squareup.moshi.Json
+
 data class Crystal(
-    val back_default: String,
-    val back_shiny: String,
-    val back_shiny_transparent: String,
-    val back_transparent: String,
-    val front_default: String,
-    val front_shiny: String,
-    val front_shiny_transparent: String,
-    val front_transparent: String
+    @Json(name = "back_default")val backDefault: String,
+    @Json(name = "back_shiny")val backShiny: String,
+    @Json(name = "back_shiny_transparent")val backShinyTransparent: String,
+    @Json(name = "back_transparent")val backTransparent: String,
+    @Json(name = "front_default")val frontDefault: String,
+    @Json(name = "front_shiny")val frontShiny: String,
+    @Json(name = "front_shiny_transparent")val frontShinyTransparent: String,
+    @Json(name = "front_transparent")val frontTransparent: String
 )
